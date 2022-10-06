@@ -215,7 +215,7 @@
                   pr-10
                   focus:border-indigo-500 focus:ring-indigo-500
                   sm:text-sm
-                   disabled:border-rose-500 disabled:placeholder:text-rose-600
+                  disabled:border-rose-500 disabled:placeholder:text-rose-600
                   peer
                 "
                 placeholder="10"
@@ -233,10 +233,7 @@
                   peer-disabled:text-rose-700
                 "
               >
-                <ReceiptPercentIcon
-                  class="h-5 w-5 "
-                  aria-hidden="true"
-                />
+                <ReceiptPercentIcon class="h-5 w-5" aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -272,7 +269,7 @@
               </select>
             </div>
           </div>
-          <div class="sm:col-span-1 ">
+          <div class="sm:col-span-1">
             <label
               for="last-name"
               class="block text-sm font-medium text-blue-gray-900"
@@ -465,55 +462,54 @@
             </div>
           </div>
         </div>
-
-        <div class="flex justify-end pt-8">
-          <button
-            type="button"
-            class="
-              rounded-md
-              border border-gray-300
-              bg-white
-              py-2
-              px-4
-              text-sm
-              font-medium
-              text-blue-gray-900
-              shadow-sm
-              hover:bg-blue-gray-50
-              focus:outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              focus:ring-offset-2
-            "
-          >
-            Cancel
-          </button>
-          <button
-            @click="saveValues()"
-            class="
-              ml-3
-              inline-flex
-              justify-center
-              rounded-md
-              border border-transparent
-              bg-blue-600
-              py-2
-              px-4
-              text-sm
-              font-medium
-              text-white
-              shadow-sm
-              hover:bg-blue-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              focus:ring-offset-2
-            "
-          >
-            Save
-          </button>
-        </div>
       </form>
+      <div class="flex justify-end pt-8">
+        <button
+          type="button"
+          class="
+            rounded-md
+            border border-gray-300
+            bg-white
+            py-2
+            px-4
+            text-sm
+            font-medium
+            text-blue-gray-900
+            shadow-sm
+            hover:bg-blue-gray-50
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:ring-offset-2
+          "
+        >
+          Cancel
+        </button>
+        <button
+          @click="saveValues()"
+          class="
+            ml-3
+            inline-flex
+            justify-center
+            rounded-md
+            border border-transparent
+            bg-blue-600
+            py-2
+            px-4
+            text-sm
+            font-medium
+            text-white
+            shadow-sm
+            hover:bg-blue-700
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:ring-offset-2
+          "
+        >
+          Save
+        </button>
+      </div>
     </div>
   </div>
 </template>
