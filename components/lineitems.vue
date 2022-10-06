@@ -15,7 +15,11 @@
         <h1 class="text-xl font-semibold text-gray-900">Breakdown</h1>
         <p class="mt-2 text-sm text-gray-700">
           For {{ companyName }} on
-          <time :datetime="new Date()">August 1, 2022</time>
+          <time :datetime="new Date()">{{
+            `${new Date().toLocaleString("default", {
+              month: "long",
+            })} ${new Date().getDate()}, ${new Date().getFullYear()}`
+          }}</time>
         </p>
       </div>
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
