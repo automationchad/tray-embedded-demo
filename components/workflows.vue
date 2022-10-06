@@ -116,7 +116,7 @@
                   text-base
                   focus:outline-none
                 "
-                placeholder="10"
+                placeholder="1"
               />
             </div>
           </div>
@@ -526,8 +526,8 @@ import { ReceiptPercentIcon } from "@heroicons/vue/24/outline";
 export default {
   data() {
     return {
-      workflows: localStorage.getItem("workflows") ?? 0,
-      workspaces: localStorage.getItem("workspaces") ?? 0,
+      workflows: localStorage.getItem("workflows") ?? 1,
+      workspaces: localStorage.getItem("workspaces") ?? 1,
       tier: localStorage.getItem("tier") ?? "Professional",
       support: localStorage.getItem("support") ?? "Standard",
       onboarding: localStorage.getItem("onboarding") ?? "Starter",
