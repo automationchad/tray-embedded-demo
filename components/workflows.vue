@@ -521,7 +521,7 @@ import { ReceiptPercentIcon } from "@heroicons/vue/24/outline";
 export default {
   data() {
     return {
-      workflows: localStorage.getItem("workflows") ?? 1,
+      workflows: localStorage.getItem("workflows"),
       workspaces: localStorage.getItem("workspaces") ?? 1,
       tier: localStorage.getItem("tier") ?? "Professional",
       support: localStorage.getItem("support") ?? "Standard",
@@ -532,7 +532,6 @@ export default {
 
   methods: {
     saveValues() {
-      localStorage.clear();
       localStorage.setItem("workflows", this.workflows);
       localStorage.setItem("workspaces", this.workspaces);
       localStorage.setItem("tier", this.tier);
