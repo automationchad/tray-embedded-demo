@@ -465,7 +465,6 @@
       </form>
       <div class="flex justify-end pt-8">
         <button
-          type="button"
           class="
             rounded-md
             border border-gray-300
