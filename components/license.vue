@@ -1,9 +1,6 @@
 <template>
   <div>
     <div class="mx-auto max-w-3xl py-10 px-4 sm:px-6 lg:py-12 lg:px-8">
-      <!-- <h1 class="text-3xl font-bold tracking-tight text-blue-gray-900">
-        Numbers
-      </h1> -->
       <form class="divide-y-blue-gray-200 mt-6 space-y-8 divide-y">
         <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-6 sm:gap-x-6">
           <div class="sm:col-span-6">

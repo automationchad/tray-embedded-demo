@@ -266,20 +266,6 @@ import {
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
 
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Teams", href: "#", icon: UserGroupIcon, current: false },
-  {
-    name: "Directory",
-    href: "#",
-    icon: MagnifyingGlassCircleIcon,
-    current: false,
-  },
-  { name: "Announcements", href: "#", icon: MegaphoneIcon, current: false },
-  { name: "Office Map", href: "#", icon: MapIcon, current: false },
-];
-
 const sidebarOpen = ref(false);
 
 const abbreviatedNumber = (number) => {
@@ -301,15 +287,10 @@ const abbreviatedNumber = (number) => {
 export default {
   data() {
     return {
-      workflows: 3,
+      workflows: localStorage.getItem("workflows") ?? 3,
       selectedPlan: localStorage.getItem("tier") ?? "Professional",
       billingCycle: "Yearly",
     };
-  },
-  methods: {
-    updateValue(value) {
-      localStorage.setItem("workflows", value);
-    },
   },
   computed: {
     effectiveWorkflows() {
@@ -360,6 +341,11 @@ export default {
           10 * 2000
         );
       }
+    },
+  },
+  methods: {
+    updateValue(value) {
+      localStorage.setItem("workflows", value);
     },
   },
 };
