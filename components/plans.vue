@@ -1115,49 +1115,6 @@ export default {
   data() {
     return {
       billingCycle: true,
-      plans: [
-        {
-          title: "Professional",
-          featured: localStorage.getItem("tier") === "Professional",
-          description: "All your essential business finances, taken care of.",
-          priceMonthly: 1500,
-          priceYearly: 18000,
-          mainFeatures: [
-            { id: 1, value: "1  Shared Workspace" },
-            { id: 2, value: "3  Included Workflows" },
-            { id: 3, value: "Unlimited users" },
-          ],
-        },
-        {
-          title: "Team",
-          featured: localStorage.getItem("tier") === "Team",
-          description:
-            "The best financial services for your thriving business.",
-          priceMonthly: 2500,
-          priceYearly: 30000,
-          mainFeatures: [
-            { id: 1, value: "2  shared workspaces" },
-            { id: 2, value: "5  Included Workflows" },
-            { id: 3, value: "Unlimited users" },
-            { id: 3, value: "Unlimited users" },
-            { id: 3, value: "Unlimited users" },
-            { id: 3, value: "Unlimited users" },
-          ],
-        },
-        {
-          title: "Enterprise",
-          featured: localStorage.getItem("tier") === "Enterprise",
-          description:
-            "Convenient features to take your business to the next level.",
-          priceMonthly: 5000,
-          priceYearly: 60000,
-          mainFeatures: [
-            { id: 1, value: "Unlimited shared workspaces" },
-            { id: 2, value: "10  Included Workflows" },
-            { id: 3, value: "Unlimited users" },
-          ],
-        },
-      ],
     };
   },
   methods: {
