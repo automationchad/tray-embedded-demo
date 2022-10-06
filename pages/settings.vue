@@ -356,8 +356,8 @@
               </div>
             </nav>
             <div class="flex-1 xl:overflow-y-auto">
-              <Profile v-if="this.$route.hash === '#profile'" />
-              <Workflows v-else-if="this.$route.hash === '#license'" />
+              <Account v-if="currentTab === 'Account'" />
+              <Workflows v-else-if="currentTab === 'License Cost'" />
               <Addons v-else />
             </div>
           </div>
@@ -395,23 +395,21 @@ import {
 import { ChevronLeftIcon, UserCircleIcon } from "@heroicons/vue/20/solid";
 import Workflows from "~~/components/workflows.vue";
 import Addons from "~~/components/addons.vue";
-import Profile from "~~/components/profile.vue";
+import Profile from "~~/components/account.vue";
 
 const navigation = [{ name: "Home", href: "/", icon: HomeIcon }];
 const subNavigation = [
   {
     name: "Account",
-    href: "/settings/#profile",
-    description:
-      "Details of the opportunity and customer problems",
+    href: "/settings/#account",
+    description: "Details of the opportunity and customer problems",
     component: Profile,
     icon: UserCircleIcon,
     current: true,
   },
   {
     name: "License Cost",
-    description:
-      "Cost lever configuration",
+    description: "Cost lever configuration",
     href: "/settings#license",
     component: Workflows,
     icon: CalculatorIcon,
@@ -419,8 +417,7 @@ const subNavigation = [
   },
   {
     name: "Add ons",
-    description:
-      "Configure the custom add ons for a given prospect",
+    description: "Configure the custom add ons for a given prospect",
     href: "/settings#addons",
     component: Addons,
     icon: SquaresPlusIcon,

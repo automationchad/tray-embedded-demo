@@ -3,7 +3,7 @@
     <main>
       <Hero />
       <Plans />
-      
+
       <Waterfall />
       <Testimonials />
       <Lineitems :workflows="workflows" :selectedPlan="selectedPlan" />
@@ -17,23 +17,10 @@
 export default {
   data() {
     return {
-      data: {
-        selectedPlan: localStorage.getItem('tier') ?? 'Professional',
-        workflows: localStorage.getItem("workflows") ?? 0,
-        records: [],
-      },
-      deal: {},
+      selectedPlan: localStorage.getItem("tier") ?? "Professional",
+      workflows: localStorage.getItem("workflows") ?? 0,
+      records: [],
     };
-  },
-
-  methods: {
-    getImage(_id) {
-      fetch(`/api/deals/${_id}`)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        });
-    },
   },
 };
 </script>
