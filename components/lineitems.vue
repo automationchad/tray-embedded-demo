@@ -328,7 +328,7 @@
 export default {
   data() {
     return {
-      workflows: localStorage.getItem("workflows") ?? 0,
+      workflows: localStorage.getItem("workflows") ?? 3,
       selectedPlan: localStorage.getItem("tier") ?? "Professional",
       companyName: localStorage.getItem("companyName") ?? "ACME, Inc.",
     };
