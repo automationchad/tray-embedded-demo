@@ -183,9 +183,7 @@
             </blockquote>
           </div>
           <div class="sm:col-span-6">
-            <label
-              for="url"
-              class="block text-sm font-medium text-slate-900"
+            <label for="url" class="block text-sm font-medium text-slate-900"
               >Current Process</label
             >
             <input
@@ -208,9 +206,7 @@
             />
           </div>
           <div class="sm:col-span-6">
-            <label
-              for="url"
-              class="block text-sm font-medium text-slate-900"
+            <label for="url" class="block text-sm font-medium text-slate-900"
               >Plan</label
             >
             <input
@@ -233,9 +229,7 @@
             />
           </div>
           <div class="sm:col-span-6">
-            <label
-              for="url"
-              class="block text-sm font-medium text-slate-900"
+            <label for="url" class="block text-sm font-medium text-slate-900"
               >Pains</label
             >
             <input
@@ -258,9 +252,7 @@
             />
           </div>
           <div class="sm:col-span-6">
-            <label
-              for="url"
-              class="block text-sm font-medium text-slate-900"
+            <label for="url" class="block text-sm font-medium text-slate-900"
               >Success</label
             >
             <input
@@ -283,56 +275,55 @@
             />
           </div>
         </div>
-
-        <div class="flex justify-end pt-8">
-          <button
-            type="button"
-            class="
-              rounded-md
-              border border-gray-300
-              bg-white
-              py-2
-              px-4
-              text-sm
-              font-medium
-              text-slate-900
-              shadow-sm
-              hover:bg-slate-50
-              focus:outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              focus:ring-offset-2
-            "
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            @click="saveValues()"
-            class="
-              ml-3
-              inline-flex
-              justify-center
-              rounded-md
-              border border-transparent
-              bg-blue-600
-              py-2
-              px-4
-              text-sm
-              font-medium
-              text-white
-              shadow-sm
-              hover:bg-blue-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              focus:ring-offset-2
-            "
-          >
-            Save
-          </button>
-        </div>
       </form>
+      <div class="flex justify-end pt-8">
+        <button
+          type="button"
+          class="
+            rounded-md
+            border border-gray-300
+            bg-white
+            py-2
+            px-4
+            text-sm
+            font-medium
+            text-slate-900
+            shadow-sm
+            hover:bg-slate-50
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:ring-offset-2
+          "
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          @click="saveValues()"
+          class="
+            ml-3
+            inline-flex
+            justify-center
+            rounded-md
+            border border-transparent
+            bg-blue-600
+            py-2
+            px-4
+            text-sm
+            font-medium
+            text-white
+            shadow-sm
+            hover:bg-blue-700
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:ring-offset-2
+          "
+        >
+          Save
+        </button>
+      </div>
     </div>
   </div>
 </template>

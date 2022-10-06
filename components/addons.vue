@@ -50,54 +50,53 @@
           </ul>
         </div>
       </div>
-      <div class="flex justify-end pt-8">
-        <button
-          type="button"
-          class="
-            rounded-md
-            border border-gray-300
-            bg-white
-            py-2
-            px-4
-            text-sm
-            font-medium
-            text-slate-900
-            shadow-sm
-            hover:bg-slate-50
-            focus:outline-none
-            focus:ring-2
-            focus:ring-blue-500
-            focus:ring-offset-2
-          "
-        >
-          Cancel
-        </button>
-        <button
-          @click="saveValues()"
-          class="
-            ml-3
-            inline-flex
-            justify-center
-            rounded-md
-            border border-transparent
-            bg-blue-600
-            py-2
-            px-4
-            text-sm
-            font-medium
-            text-white
-            shadow-sm
-            hover:bg-blue-700
-            focus:outline-none
-            focus:ring-2
-            focus:ring-blue-500
-            focus:ring-offset-2
-          "
-        >
-          Save
-        </button>
-      </div>
     </form>
+    <div class="flex justify-end pt-8">
+      <button
+        type="button"
+        class="
+          rounded-md
+          border border-gray-300
+          bg-white
+          py-2
+          px-4
+          text-sm
+          font-medium
+          text-slate-900
+          shadow-sm
+          hover:bg-slate-50
+          focus:outline-none
+          focus:ring-2
+          focus:ring-blue-500
+          focus:ring-offset-2
+        "
+      >
+        Cancel
+      </button>
+      <button
+        class="
+          ml-3
+          inline-flex
+          justify-center
+          rounded-md
+          border border-transparent
+          bg-blue-600
+          py-2
+          px-4
+          text-sm
+          font-medium
+          text-white
+          shadow-sm
+          hover:bg-blue-700
+          focus:outline-none
+          focus:ring-2
+          focus:ring-blue-500
+          focus:ring-offset-2
+        "
+      >
+        Save
+      </button>
+    </div>
   </div>
 </template>
 
@@ -116,7 +115,9 @@ export default {
           description:
             "Single sign on integrates into your existing SAML based authentication infrastructure",
           price: 3000,
-          enabled: localStorage.getItem("sso") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("sso") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
         {
           name: "Multi Region Hosting",
@@ -124,7 +125,9 @@ export default {
           description:
             "For customers who have a strict requirement that their data must be hosted in the USA, EU or APAC.",
           price: 6000,
-          enabled: localStorage.getItem("regions") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("regions") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
         {
           name: "Log Streaming",
@@ -132,7 +135,9 @@ export default {
           description:
             "Programmatically export Tray Platform log data to access it in third-party monitoring services",
           price: 6000,
-          enabled: localStorage.getItem("log_streaming") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("log_streaming") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
         {
           name: "Custom Log Retention",
@@ -140,7 +145,9 @@ export default {
           description:
             "Flexible log data retention policies designed to fit your requirements",
           price: 6000,
-          enabled: localStorage.getItem("log_retention") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("log_retention") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
         {
           name: "On premise connectivty",
@@ -148,7 +155,9 @@ export default {
           description:
             "Build workflows to connect apps in your data center with your cloud apps",
           price: 12000,
-          enabled: localStorage.getItem("on-prem") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("on-prem") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
         {
           name: "HIPAA Compliance",
@@ -156,7 +165,9 @@ export default {
           description:
             "Meets HIPAA standards for data processing, security and incident notification",
           price: 9000,
-          enabled: localStorage.getItem("hipaa") === "true" || localStorage.getItem("tier") === "Enterprise",
+          enabled:
+            localStorage.getItem("hipaa") === "true" ||
+            localStorage.getItem("tier") === "Enterprise",
         },
       ],
     };
