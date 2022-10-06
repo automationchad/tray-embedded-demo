@@ -324,16 +324,16 @@
                 <p class="text-lg font-medium text-blue-gray-900">Settings</p>
               </div>
               <div class="min-h-0 flex-1 overflow-y-auto">
-                <a
+                <div
                   v-for="item in subNavigation"
                   @click="currentTab = item.name"
                   :key="item.name"
-                  :href="item.href"
+                  
                   :class="[
                     currentTab == item.name
                       ? 'bg-blue-50 bg-opacity-50'
                       : 'hover:bg-blue-50 hover:bg-opacity-50',
-                    'flex p-6 border-b border-blue-gray-200',
+                    'flex p-6 border-b border-slate-200 cursor-pointer',
                   ]"
                   :aria-current="
                     item.name == currentTab ? 'page' : undefined
@@ -352,7 +352,7 @@
                       {{ item.description }}
                     </p>
                   </div>
-                </a>
+                </div>
               </div>
             </nav>
             <div class="flex-1 xl:overflow-y-auto">

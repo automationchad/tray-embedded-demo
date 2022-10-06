@@ -84,7 +84,7 @@
             >
               <NuxtLink
                 type="button"
-                to="/settings/#account"
+                to="/settings"
                 class="
                   inline-flex
                   shadow
