@@ -3,10 +3,9 @@
     <main>
       <Hero />
       <Plans />
-
       <Waterfall />
       <Testimonials />
-      <Lineitems :selectedPlan="selectedPlan" />
+      <Lineitems/>
       <Faqs />
     </main>
     <Footer />
