@@ -326,17 +326,17 @@
               <div class="min-h-0 flex-1 overflow-y-auto">
                 <a
                   v-for="item in subNavigation"
-                  @click="currentTab = item.component"
+                  @click="currentTab = item.name"
                   :key="item.name"
                   :href="item.href"
                   :class="[
-                    currentTab == item.component
+                    currentTab == item.name
                       ? 'bg-blue-50 bg-opacity-50'
                       : 'hover:bg-blue-50 hover:bg-opacity-50',
                     'flex p-6 border-b border-blue-gray-200',
                   ]"
                   :aria-current="
-                    item.component == currentTab ? 'page' : undefined
+                    item.name == currentTab ? 'page' : undefined
                   "
                 >
                   <component
@@ -356,8 +356,8 @@
               </div>
             </nav>
             <div class="flex-1 xl:overflow-y-auto">
-              <Account v-if="currentTab === Account" />
-              <Workflows v-else-if="currentTab === Workflows" />
+              <Account v-if="currentTab === 'Account'" />
+              <Workflows v-else-if="currentTab === 'Workflows'" />
               <Addons v-else />
             </div>
           </div>
