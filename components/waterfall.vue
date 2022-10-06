@@ -60,7 +60,7 @@
                       Math.round(
                         workflowCost /
                           12 /
-                          (effectiveWorkflows > 0 ? effectiveWorkflows : 1)
+                          (effectiveFlows > 0 ? effectiveFlows : 1)
                       )
                     }}
                     per wf/mo
@@ -154,105 +154,16 @@
   </div>
 </template>
 
-<style scoped>
-.range {
-  -webkit-appearance: none;
-  vertical-align: middle;
-  outline: none;
-  border: none;
-  padding: 0;
-  background: none;
-}
 
-.range::-webkit-slider-runnable-track {
-  background-color: #ffffff6d;
-  height: 6px;
-  border-radius: 3px;
-  border: 1px solid transparent;
-}
 
-.range[disabled]::-webkit-slider-runnable-track {
-  border: 1px solid #d7dbdd;
-  background-color: transparent;
-  opacity: 0.4;
-}
-
-.range::-moz-range-track {
-  background-color: #d7dbdd;
-  height: 6px;
-  border-radius: 3px;
-  border: none;
-}
-
-.range::-ms-track {
-  color: transparent;
-  border: none;
-  background: none;
-  height: 6px;
-}
-
-.range::-ms-fill-lower {
-  background-color: #d7dbdd;
-  border-radius: 3px;
-}
-
-.range::-ms-fill-upper {
-  background-color: #d7dbdd;
-  border-radius: 3px;
-}
-
-.range::-moz-range-thumb {
-  border-radius: 20px;
-  height: 18px;
-  width: 18px;
-  border: none;
-  background: none;
-  background-color: #4d2ab6;
-}
-
-.range:active::-moz-range-thumb {
-  outline: none;
-}
-
-.range::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
-  border-radius: 100%;
-  background-color: #4d2ab6;
-  height: 18px;
-  width: 18px;
-  margin-top: -7px;
-}
-
-.range[disabled]::-webkit-slider-thumb {
-  background-color: transparent;
-  border: 1px solid #d7dbdd;
-}
-
-.range:active::-webkit-slider-thumb {
-  outline: none;
-}
-
-.range::-ms-thumb {
-  border-radius: 100%;
-  background-color: #606670;
-  height: 18px;
-  width: 18px;
-  border: none;
-}
-
-.range:active::-ms-thumb {
-  border: none;
-}
-</style>
-
-<script setup>
-import { ref } from "vue";
+<script>
 import {
   Dialog,
   DialogPanel,
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
+
 import {
   Bars3Icon,
   CalendarIcon,
@@ -265,26 +176,8 @@ import {
   BoltIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
-
-const sidebarOpen = ref(false);
-
-const abbreviatedNumber = (number) => {
-  const SI_SYMBOL = ["", "k", "M", "B", "T", "P", "E"];
-  const tier = (Math.log10(Math.abs(number)) / 3) | 0;
-  if (tier === 0) {
-    return number;
-  }
-  const suffix = SI_SYMBOL[tier];
-  const scale = 10 ** (tier * 3);
-  const scaled = number / scale;
-  const { length } = scaled.toFixed(1).toString();
-  const precision = length > 3 ? 0 : 1;
-  return scaled.toFixed(precision) + suffix;
-};
-</script>
-
-<script>
 export default {
+  components: { BoltIcon, ArrowPathIcon },
   data() {
     return {
       workflows: localStorage.getItem("workflows") ?? 3,
@@ -293,11 +186,13 @@ export default {
     };
   },
   computed: {
-    effectiveWorkflows() {
+    effectiveFlows() {
       let includedWorkflows = 0;
-      if (this.selectedPlan === "Professional") includedWorkflows = 3;
-      else if (this.selectedPlan === "Team") includedWorkflows = 5;
-      else includedWorkflows = 10;
+      if (this.selectedPlan === "Professional") {
+        includedWorkflows = 3;
+      } else if (this.selectedPlan === "Team") {
+        includedWorkflows = 5;
+      } else includedWorkflows = 10;
       const result = this.workflows - includedWorkflows;
       return result;
     },
@@ -311,41 +206,53 @@ export default {
         includedWorkflows = 10;
       }
       let effectiveWorkflows = this.workflows - includedWorkflows;
+      let cost;
       if (this.workflows <= includedWorkflows) {
-        return 0;
+        cost = 0;
       } else if (effectiveWorkflows <= 10) {
-        return 2000 * effectiveWorkflows;
+        cost = 2000 * effectiveWorkflows;
       } else if (effectiveWorkflows <= 30) {
-        return (effectiveWorkflows - 10) * 1000 + 10 * 2000;
+        cost = (effectiveWorkflows - 10) * 1000 + 10 * 2000;
       } else if (effectiveWorkflows <= 100) {
-        return (effectiveWorkflows - 30) * 500 + 20 * 1000 + 10 * 2000;
+        cost = (effectiveWorkflows - 30) * 500 + 20 * 1000 + 10 * 2000;
       } else if (effectiveWorkflows <= 200) {
-        return (
-          (effectiveWorkflows - 100) * 125 + 70 * 500 + 20 * 1000 + 10 * 2000
-        );
+        cost =
+          (effectiveWorkflows - 100) * 125 + 70 * 500 + 20 * 1000 + 10 * 2000;
       } else if (effectiveWorkflows <= 400) {
-        return (
+        cost =
           (effectiveWorkflows - 200) * 100 +
           100 * 125 +
           70 * 500 +
           20 * 1000 +
-          10 * 2000
-        );
+          10 * 2000;
       } else {
-        return (
+        cost =
           (effectiveWorkflows - 400) * 90 +
           200 * 100 +
           100 * 125 +
           70 * 500 +
           20 * 1000 +
-          10 * 2000
-        );
+          10 * 2000;
       }
+      return cost;
     },
   },
   methods: {
     updateValue(value) {
       localStorage.setItem("workflows", value);
+    },
+    abbreviatedNumber(number) {
+      const SI_SYMBOL = ["", "k", "M", "B", "T", "P", "E"];
+      const tier = (Math.log10(Math.abs(number)) / 3) | 0;
+      if (tier === 0) {
+        return number;
+      }
+      const suffix = SI_SYMBOL[tier];
+      const scale = 10 ** (tier * 3);
+      const scaled = number / scale;
+      const length = scaled.toFixed(1).toString();
+      const precision = length > 3 ? 0 : 1;
+      return scaled.toFixed(precision) + suffix;
     },
   },
 };

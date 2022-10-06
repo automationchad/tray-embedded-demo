@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="mx-auto max-w-3xl py-10 px-4 sm:px-6 lg:py-12 lg:px-8">
-      <form class="divide-y-blue-gray-200 mt-6 space-y-8 divide-y">
+      <form class="divide-y-slate-200 mt-6 space-y-8 divide-y">
         <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-6 sm:gap-x-6">
           <div class="sm:col-span-6">
-            <h2 class="text-xl font-medium text-blue-gray-900">
+            <h2 class="text-xl font-medium text-slate-900">
               License Costs
             </h2>
-            <p class="mt-1 text-sm text-blue-gray-500">
+            <p class="mt-1 text-sm text-slate-500">
               Enter or select values in all cells to calculate price.
             </p>
           </div>
@@ -15,7 +15,7 @@
           <div class="sm:col-span-5">
             <label
               for="tier"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Package</label
             >
             <div>
@@ -48,7 +48,7 @@
           <div class="sm:col-span-1">
             <label
               for="last-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm">
@@ -89,7 +89,7 @@
           <div class="sm:col-span-5">
             <label
               for="workflows"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Workflows</label
             >
             <div>
@@ -121,7 +121,7 @@
           <div class="sm:col-span-1">
             <label
               for="last-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm">
@@ -161,7 +161,7 @@
           <div class="sm:col-span-5">
             <label
               for="workspaces"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Workspaces</label
             >
             <div>
@@ -195,7 +195,7 @@
           <div class="sm:col-span-1">
             <label
               for="disount"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm opacity-50">
@@ -237,7 +237,7 @@
           <div class="sm:col-span-5">
             <label
               for="support"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Support Plan</label
             >
             <div>
@@ -269,7 +269,7 @@
           <div class="sm:col-span-1">
             <label
               for="last-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm opacity-50">
@@ -310,7 +310,7 @@
           <div class="sm:col-span-5">
             <label
               for="onboarding"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Onboarding</label
             >
             <div>
@@ -344,7 +344,7 @@
           <div class="sm:col-span-1">
             <label
               for="discount"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm opacity-50">
@@ -385,7 +385,7 @@
           <div class="sm:col-span-5">
             <label
               for="success"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Success Services</label
             >
             <div>
@@ -419,7 +419,7 @@
           <div class="sm:col-span-1">
             <label
               for="discount"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Discount</label
             >
             <div class="relative mt-1 rounded-md shadow-sm opacity-50">
@@ -470,9 +470,9 @@
             px-4
             text-sm
             font-medium
-            text-blue-gray-900
+            text-slate-900
             shadow-sm
-            hover:bg-blue-gray-50
+            hover:bg-slate-50
             focus:outline-none
             focus:ring-2
             focus:ring-blue-500
@@ -510,12 +510,11 @@
   </div>
 </template>
 
-<script setup>
-import { ReceiptPercentIcon } from "@heroicons/vue/24/outline";
-</script>
 
 <script>
+  import { ReceiptPercentIcon } from "@heroicons/vue/24/outline";
 export default {
+  components: { ReceiptPercentIcon},
   data() {
     return {
       workflows: localStorage.getItem("workflows") ?? 1,

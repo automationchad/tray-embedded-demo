@@ -526,9 +526,7 @@ export default {
           rate: 250,
         });
       }
-
       return arr.filter((o) => o.rate > 0);
-      s;
     },
   },
 };

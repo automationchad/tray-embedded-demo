@@ -16,7 +16,7 @@
           leave-from="opacity-100"
           leave-to="opacity-0"
         >
-          <div class="fixed inset-0 bg-blue-gray-600 bg-opacity-75" />
+          <div class="fixed inset-0 bg-slate-600 bg-opacity-75" />
         </TransitionChild>
 
         <div class="fixed inset-0 z-40 flex">
@@ -94,8 +94,8 @@
                         p-2
                         text-base
                         font-medium
-                        text-blue-gray-600
-                        hover:bg-blue-gray-50 hover:text-blue-gray-900
+                        text-slate-600
+                        hover:bg-slate-50 hover:text-slate-900
                       "
                     >
                       <component
@@ -104,8 +104,8 @@
                           mr-4
                           h-6
                           w-6
-                          text-blue-gray-400
-                          group-hover:text-blue-gray-500
+                          text-slate-400
+                          group-hover:text-slate-500
                         "
                         aria-hidden="true"
                       />
@@ -114,7 +114,7 @@
                   </div>
                 </nav>
               </div>
-              <div class="flex flex-shrink-0 border-t border-blue-gray-200 p-4">
+              <div class="flex flex-shrink-0 border-t border-slate-200 p-4">
                 <a href="#" class="group block flex-shrink-0">
                   <div class="flex items-center">
                     <div>
@@ -129,8 +129,8 @@
                         class="
                           text-base
                           font-medium
-                          text-blue-gray-700
-                          group-hover:text-blue-gray-900
+                          text-slate-700
+                          group-hover:text-slate-900
                         "
                       >
                         Lisa Marie
@@ -139,8 +139,8 @@
                         class="
                           text-sm
                           font-medium
-                          text-blue-gray-500
-                          group-hover:text-blue-gray-700
+                          text-slate-500
+                          group-hover:text-slate-700
                         "
                       >
                         Account Settings
@@ -263,7 +263,7 @@
           <!-- Breadcrumb -->
           <nav
             aria-label="Breadcrumb"
-            class="border-b border-blue-gray-200 bg-white xl:hidden"
+            class="border-b border-slate-200 bg-white xl:hidden"
           >
             <div
               class="
@@ -286,11 +286,11 @@
                   space-x-3
                   text-sm
                   font-medium
-                  text-blue-gray-900
+                  text-slate-900
                 "
               >
                 <ChevronLeftIcon
-                  class="h-5 w-5 text-blue-gray-400"
+                  class="h-5 w-5 text-slate-400"
                   aria-hidden="true"
                 />
                 <span>Settings</span>
@@ -306,7 +306,7 @@
                 hidden
                 w-96
                 flex-shrink-0
-                border-r border-blue-gray-200
+                border-r border-slate-200
                 bg-white
                 xl:flex xl:flex-col
               "
@@ -317,11 +317,11 @@
                   h-16
                   flex-shrink-0
                   items-center
-                  border-b border-blue-gray-200
+                  border-b border-slate-200
                   px-6
                 "
               >
-                <p class="text-lg font-medium text-blue-gray-900">Settings</p>
+                <p class="text-lg font-medium text-slate-900">Settings</p>
               </div>
               <div class="min-h-0 flex-1 overflow-y-auto">
                 <div
@@ -340,14 +340,14 @@
                 >
                   <component
                     :is="item.icon"
-                    class="-mt-0.5 h-6 w-6 flex-shrink-0 text-blue-gray-400"
+                    class="-mt-0.5 h-6 w-6 flex-shrink-0 text-slate-400"
                     aria-hidden="true"
                   />
                   <div class="ml-3 text-sm">
-                    <p class="font-medium text-blue-gray-900">
+                    <p class="font-medium text-slate-900">
                       {{ item.name }}
                     </p>
-                    <p class="mt-1 text-blue-gray-500">
+                    <p class="mt-1 text-slate-500">
                       {{ item.description }}
                     </p>
                   </div>

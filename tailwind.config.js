@@ -11,11 +11,7 @@ module.exports = {
 		'./nuxt.config.{js,ts}',
 	],
 	theme: {
-		extend: {
-			colors: {
-				'blue-gray': colors.blueGray,
-			},
-		},
+		extend: {},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),

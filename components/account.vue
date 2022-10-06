@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="mx-auto max-w-3xl py-10 px-4 sm:px-6 lg:py-12 lg:px-8">
-      <form class="divide-y-blue-gray-200 mt-6 space-y-8 divide-y">
+      <form class="divide-y-slate-200 mt-6 space-y-8 divide-y">
         <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-6 sm:gap-x-6">
           <div class="sm:col-span-6">
-            <h2 class="text-xl font-medium text-blue-gray-900">Deal details</h2>
-            <p class="mt-1 text-sm text-blue-gray-500">
+            <h2 class="text-xl font-medium text-slate-900">Deal details</h2>
+            <p class="mt-1 text-sm text-slate-500">
               This information will be displayed publicly so be careful what you
               share.
             </p>
@@ -14,7 +14,7 @@
           <div class="sm:col-span-3">
             <label
               for="first-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >First name</label
             >
             <input
@@ -28,8 +28,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -40,7 +40,7 @@
           <div class="sm:col-span-3">
             <label
               for="last-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Last name</label
             >
             <input
@@ -54,8 +54,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -65,7 +65,7 @@
           <div class="sm:col-span-6">
             <label
               for="company-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Company name</label
             >
             <input
@@ -79,8 +79,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -90,7 +90,7 @@
           <div class="sm:col-span-6">
             <label
               for="company-name"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Logo URL</label
             >
             <div class="mt-1 flex rounded-md shadow-sm">
@@ -185,7 +185,7 @@
           <div class="sm:col-span-6">
             <label
               for="url"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Current Process</label
             >
             <input
@@ -199,8 +199,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -210,7 +210,7 @@
           <div class="sm:col-span-6">
             <label
               for="url"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Plan</label
             >
             <input
@@ -224,8 +224,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -235,7 +235,7 @@
           <div class="sm:col-span-6">
             <label
               for="url"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Pains</label
             >
             <input
@@ -249,8 +249,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -260,7 +260,7 @@
           <div class="sm:col-span-6">
             <label
               for="url"
-              class="block text-sm font-medium text-blue-gray-900"
+              class="block text-sm font-medium text-slate-900"
               >Success</label
             >
             <input
@@ -274,8 +274,8 @@
                 block
                 w-full
                 rounded-md
-                border-blue-gray-300
-                text-blue-gray-900
+                border-slate-300
+                text-slate-900
                 shadow-sm
                 focus:border-blue-500 focus:ring-blue-500
                 sm:text-sm
@@ -295,9 +295,9 @@
               px-4
               text-sm
               font-medium
-              text-blue-gray-900
+              text-slate-900
               shadow-sm
-              hover:bg-blue-gray-50
+              hover:bg-slate-50
               focus:outline-none
               focus:ring-2
               focus:ring-blue-500
