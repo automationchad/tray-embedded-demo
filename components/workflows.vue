@@ -17,14 +17,14 @@
 
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="tier"
               class="block text-sm font-medium text-blue-gray-900"
               >Package</label
             >
             <div>
               <select
-                id="location"
-                name="location"
+                id="tier"
+                name="tier"
                 v-model="tier"
                 class="
                   mt-1
@@ -91,7 +91,7 @@
 
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="workflows"
               class="block text-sm font-medium text-blue-gray-900"
               >Workflows</label
             >
@@ -163,7 +163,7 @@
           </div>
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="workspaces"
               class="block text-sm font-medium text-blue-gray-900"
               >Workspaces</label
             >
@@ -174,8 +174,8 @@
                 :disabled="tier === 'Enterprise'"
                 min="1"
                 max="400"
-                name="workflows"
-                id="workflows"
+                name="workspaces"
+                id="workspaces"
                 class="
                   block
                   w-full
@@ -197,7 +197,7 @@
 
           <div class="sm:col-span-1">
             <label
-              for="last-name"
+              for="disount"
               class="block text-sm font-medium text-blue-gray-900"
               >Discount</label
             >
@@ -239,14 +239,14 @@
           </div>
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="support"
               class="block text-sm font-medium text-blue-gray-900"
               >Support Plan</label
             >
             <div>
               <select
-                id="location"
-                name="location"
+                id="support"
+                name="support"
                 v-model="support"
                 class="
                   mt-1
@@ -312,15 +312,15 @@
           </div>
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="onboarding"
               class="block text-sm font-medium text-blue-gray-900"
               >Onboarding</label
             >
             <div>
               <select
-                id="location"
+                id="onboarding"
                 v-model="onboarding"
-                name="location"
+                name="onboarding"
                 class="
                   mt-1
                   block
@@ -346,7 +346,7 @@
 
           <div class="sm:col-span-1">
             <label
-              for="last-name"
+              for="discount"
               class="block text-sm font-medium text-blue-gray-900"
               >Discount</label
             >
@@ -387,15 +387,15 @@
           </div>
           <div class="sm:col-span-5">
             <label
-              for="first-name"
+              for="success"
               class="block text-sm font-medium text-blue-gray-900"
               >Success Services</label
             >
             <div>
               <select
-                id="location"
+                id="success"
                 v-model="success"
-                name="location"
+                name="success"
                 class="
                   mt-1
                   block
@@ -421,7 +421,7 @@
 
           <div class="sm:col-span-1">
             <label
-              for="last-name"
+              for="discount"
               class="block text-sm font-medium text-blue-gray-900"
               >Discount</label
             >
