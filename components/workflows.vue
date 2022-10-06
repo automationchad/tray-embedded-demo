@@ -532,6 +532,7 @@ export default {
 
   methods: {
     saveValues() {
+      localStorage.clear();
       localStorage.setItem("workflows", this.workflows);
       localStorage.setItem("workspaces", this.workspaces);
       localStorage.setItem("tier", this.tier);
