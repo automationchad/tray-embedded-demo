@@ -440,7 +440,7 @@ const mobileMenuOpen = ref(false);
 export default {
   data() {
     return {
-      currentTab: Workflows,
+      currentTab: 'Account',
     };
   },
 };
