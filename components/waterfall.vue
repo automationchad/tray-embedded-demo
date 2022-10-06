@@ -39,7 +39,6 @@
                 <button
                   class="bg-white text-black rounded-full p-2"
                   @click="updateValue(workflows)"
-                  href="/#pricing"
                 >
                   <ArrowPathIcon class="h-5 w-5" />
                 </button>
@@ -109,7 +108,7 @@
                     max="400"
                     class="w-full range mb-4"
                     id="slider"
-                    v-model="workflows"
+                    :v-model="workflows"
                   />
                   <div class="flex items-center justify-end">
                     <div
@@ -138,13 +137,14 @@
 
         <aside class="w-96 border-r border-gray-200 flex items-start">
           <!-- Start secondary column (hidden on smaller screens) -->
-          <div class="py-12 px-4 sm:px-6 lg:px-8 ">
+          <div class="py-12 px-4 sm:px-6 lg:px-8">
             <div class="h-full rounded-lg">
               <Table />
               <p class="text-sm text-gray-400 mt-6">
                 Workflows are true’d up quarterly based on the number of active
-                integrations. <br><br>Pricing will be prorated (i.e. Adding WF #4 6
-                months into a 12 month contract will be $1000 not $2000).
+                integrations. <br /><br />Pricing will be prorated (i.e. Adding
+                WF #4 6 months into a 12 month contract will be $1000 not
+                $2000).
               </p>
             </div>
           </div>
@@ -317,26 +317,32 @@ export default {
       if (this.selectedPlan === "Professional") includedWorkflows = 3;
       else if (this.selectedPlan === "Team") includedWorkflows = 5;
       else includedWorkflows = 10;
-      const effectiveWorkflows = this.workflows - includedWorkflows;
-      return effectiveWorkflows;
+      const result = this.workflows - includedWorkflows;
+      return result;
     },
     workflowCost() {
       let includedWorkflows = 0;
-      if (this.selectedPlan === "Professional") includedWorkflows = 3;
-      else if (this.selectedPlan === "Team") includedWorkflows = 5;
-      else includedWorkflows = 10;
-      const effectiveWorkflows = this.workflows - includedWorkflows;
-      if (this.workflows <= includedWorkflows) return 0;
-      else if (effectiveWorkflows <= 10) return 2000 * effectiveWorkflows;
-      else if (effectiveWorkflows <= 30)
+      if (this.selectedPlan === "Professional") {
+        includedWorkflows = 3;
+      } else if (this.selectedPlan === "Team") {
+        includedWorkflows = 5;
+      } else {
+        includedWorkflows = 10;
+      }
+      let effectiveWorkflows = this.workflows - includedWorkflows;
+      if (this.workflows <= includedWorkflows) {
+        return 0;
+      } else if (effectiveWorkflows <= 10) {
+        return 2000 * effectiveWorkflows;
+      } else if (effectiveWorkflows <= 30) {
         return (effectiveWorkflows - 10) * 1000 + 10 * 2000;
-      else if (effectiveWorkflows <= 100)
+      } else if (effectiveWorkflows <= 100) {
         return (effectiveWorkflows - 30) * 500 + 20 * 1000 + 10 * 2000;
-      else if (effectiveWorkflows <= 200)
+      } else if (effectiveWorkflows <= 200) {
         return (
           (effectiveWorkflows - 100) * 125 + 70 * 500 + 20 * 1000 + 10 * 2000
         );
-      else if (effectiveWorkflows <= 400)
+      } else if (effectiveWorkflows <= 400) {
         return (
           (effectiveWorkflows - 200) * 100 +
           100 * 125 +
@@ -344,7 +350,7 @@ export default {
           20 * 1000 +
           10 * 2000
         );
-      else
+      } else {
         return (
           (effectiveWorkflows - 400) * 90 +
           200 * 100 +
@@ -353,6 +359,7 @@ export default {
           20 * 1000 +
           10 * 2000
         );
+      }
     },
   },
 };
