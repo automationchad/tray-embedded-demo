@@ -95,7 +95,7 @@
             <div>
               <input
                 type="number"
-                v-model="workflows"
+                v-model.number="workflows"
                 min="1"
                 max="400"
                 name="workflows"
@@ -167,7 +167,7 @@
             <div>
               <input
                 type="number"
-                v-model="workspaces"
+                v-model.number="workspaces"
                 :disabled="tier === 'Enterprise'"
                 min="1"
                 max="400"

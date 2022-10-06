@@ -104,11 +104,11 @@
                   </div>
                   <input
                     type="range"
+                    v-model.number="workflows"
                     min="1"
                     max="400"
                     class="w-full range mb-4"
                     id="slider"
-                    v-model="workflows"
                   />
                   <div class="flex items-center justify-end">
                     <div
