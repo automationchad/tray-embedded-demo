@@ -357,7 +357,7 @@
             </nav>
             <div class="flex-1 xl:overflow-y-auto">
               <Account v-if="currentTab === 'Account'" />
-              <Workflows v-else-if="currentTab === 'Workflows'" />
+              <Workflows v-else-if="currentTab === 'License Cost'" />
               <Addons v-else />
             </div>
           </div>
