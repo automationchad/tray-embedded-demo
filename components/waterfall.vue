@@ -108,7 +108,7 @@
                     max="400"
                     class="w-full range mb-4"
                     id="slider"
-                    :v-model="workflows"
+                    v-model="workflows"
                   />
                   <div class="flex items-center justify-end">
                     <div
