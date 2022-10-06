@@ -328,7 +328,6 @@
                   v-for="item in subNavigation"
                   @click="currentTab = item.name"
                   :key="item.name"
-                  
                   :class="[
                     currentTab == item.name
                       ? 'bg-blue-50 bg-opacity-50'
@@ -357,7 +356,7 @@
             </nav>
             <div class="flex-1 xl:overflow-y-auto">
               <Account v-if="currentTab === 'Account'" />
-              <Workflows v-else-if="currentTab === 'License Cost'" />
+              <License v-else-if="currentTab === 'License'" />
               <Addons v-else />
             </div>
           </div>
@@ -393,9 +392,6 @@ import {
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
 import { ChevronLeftIcon, UserCircleIcon } from "@heroicons/vue/20/solid";
-import Workflows from "~~/components/workflows.vue";
-import Addons from "~~/components/addons.vue";
-import Account from "~~/components/account.vue";
 
 const navigation = [{ name: "Home", href: "/", icon: HomeIcon }];
 const subNavigation = [
@@ -403,15 +399,13 @@ const subNavigation = [
     name: "Account",
     href: "/settings/#account",
     description: "Details of the opportunity and customer problems",
-    component: Account,
     icon: UserCircleIcon,
     current: true,
   },
   {
-    name: "License Cost",
+    name: "License",
     description: "Cost lever configuration",
     href: "/settings#license",
-    component: Workflows,
     icon: CalculatorIcon,
     current: true,
   },
@@ -419,18 +413,9 @@ const subNavigation = [
     name: "Add ons",
     description: "Configure the custom add ons for a given prospect",
     href: "/settings#addons",
-    component: Addons,
     icon: SquaresPlusIcon,
     current: false,
   },
-  //   {
-  //     name: "Additional Resources",
-  //     description:
-  //       "Quis viverra netus donec ut auctor fringilla facilisis. Nunc sit donec cursus sit quis et.",
-  //     href: "#",
-  //     icon: MagnifyingGlassCircleIcon,
-  //     current: false,
-  //   },
 ];
 
 const mobileMenuOpen = ref(false);

@@ -301,7 +301,7 @@ const abbreviatedNumber = (number) => {
 export default {
   data() {
     return {
-      workflows: localStorage.getItem("workflows") ?? 3,
+      workflows: 3,
       selectedPlan: localStorage.getItem("tier") ?? "Professional",
       billingCycle: "Yearly",
     };
