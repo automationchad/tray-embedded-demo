@@ -155,7 +155,7 @@
                 sm:table-cell
               "
             >
-              ${{ project.rate.toLocaleString() }}
+              ${{ Math.round(project.rate).toLocaleString() }}
             </td>
             <td
               class="

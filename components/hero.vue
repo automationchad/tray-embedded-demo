@@ -36,7 +36,7 @@
                     <span class="sr-only">Your Company</span>
                     <Logo class="h-14 w-auto mr-10" />
                     <div class="mr-10">+</div>
-                    <img :src="logoURL" alt="" class="h-8" />
+                    <img :src="logoURL" alt="" class="h-14" />
                   </div>
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">

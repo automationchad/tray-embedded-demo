@@ -17,10 +17,8 @@
         <main class="z-0 flex-1 focus:outline-none xl:order-last">
           <!-- Start main area-->
           <div
-            class="py-6 px-4 sm:px-6 lg:px-8 bg-center bg-cover h-full"
-            style="
-              background-image: url('https://images.unsplash.com/photo-1601388152430-4ad0f14c0788?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3300&q=80');
-            "
+            class="py-6 px-4 sm:px-6 lg:px-8 h-full"
+            style="background-image: linear-gradient(45deg,#fa8bff 0%,#2bd2ff 52%,#2bff88 90%);"
           >
             <div
               class="
@@ -37,10 +35,21 @@
             >
               <div class="absolute top-2 right-2">
                 <button
-                  class="bg-white text-black rounded-full p-2"
+                  class="
+                    bg-white
+                    text-black
+                    rounded-full
+                    p-2
+                    hover:bg-gray-50
+                    border border-white
+                    active:scale-95
+                    group
+                  "
                   @click="updateValue(workflows)"
                 >
-                  <ArrowPathIcon class="h-5 w-5" />
+                  <ArrowPathIcon
+                    :class="[clicked ? 'animate-spin' : '', 'h-5 w-5']"
+                  />
                 </button>
               </div>
               <div class="flex-col flex items-start">
@@ -180,6 +189,7 @@ export default {
   components: { BoltIcon, ArrowPathIcon },
   data() {
     return {
+      clicked: false,
       workflows: localStorage.getItem("workflows") ?? 3,
       selectedPlan: localStorage.getItem("tier") ?? "Professional",
       billingCycle: "Yearly",
@@ -240,7 +250,11 @@ export default {
   methods: {
     updateValue(value) {
       localStorage.setItem("workflows", value);
-      location.reload();
+      this.clicked = !this.clicked;
+      setTimeout(() => {
+        this.clicked = !this.clicked;
+        location.reload();
+      }, 1000);
     },
     abbreviatedNumber(number) {
       const SI_SYMBOL = ["", "k", "M", "B", "T", "P", "E"];
