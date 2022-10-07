@@ -1120,6 +1120,7 @@ export default {
   methods: {
     setPlan(value) {
       localStorage.setItem("tier", value);
+      location.reload();
     },
   },
   computed: {

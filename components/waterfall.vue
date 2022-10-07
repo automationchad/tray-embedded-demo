@@ -240,6 +240,7 @@ export default {
   methods: {
     updateValue(value) {
       localStorage.setItem("workflows", value);
+      location.reload();
     },
     abbreviatedNumber(number) {
       const SI_SYMBOL = ["", "k", "M", "B", "T", "P", "E"];

@@ -1,5 +1,9 @@
 
 <template>
+  <Head>
+    <Title>Tray.io - Pricing Settings</Title>
+    <Meta name="description" content="Tray.io - Pricing Settings" />
+  </Head>
   <div class="flex h-full min-h-screen">
     <TransitionRoot as="template" :show="mobileMenuOpen">
       <Dialog
@@ -334,9 +338,7 @@
                       : 'hover:bg-blue-50 hover:bg-opacity-50',
                     'flex p-6 border-b border-slate-200 cursor-pointer',
                   ]"
-                  :aria-current="
-                    item.name == currentTab ? 'page' : undefined
-                  "
+                  :aria-current="item.name == currentTab ? 'page' : undefined"
                 >
                   <component
                     :is="item.icon"
@@ -425,7 +427,7 @@ const mobileMenuOpen = ref(false);
 export default {
   data() {
     return {
-      currentTab: 'Account',
+      currentTab: "Account",
     };
   },
 };
