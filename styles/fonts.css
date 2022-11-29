@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/public/fonts/Inter-italic.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Dank Mono';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/public/fonts/Dank-Mono-Regular.var.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Dank Mono';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/public/fonts/Dank-Mono-Italic.var.otf') format('otf');
+}
+

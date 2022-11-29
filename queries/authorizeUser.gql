@@ -1,0 +1,5 @@
+mutation authorizeUser ($userId: ID!) {
+	authorize(input: { userId: $userId }) {
+		accessToken
+	}
+}

@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/supabase": "^0.1.28",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "node-sass": "^7.0.3",
     "nuxt": "3.0.0-rc.11",
@@ -23,6 +24,15 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.7",
     "airtable": "^0.11.5",
-    "axios": "^1.0.0"
+    "axios": "^1.0.0",
+    "chart.js": "^3.9.1",
+    "daisyui": "^2.33.0",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "nuxt-graphql-client": "^0.1.19",
+    "prismjs": "^1.29.0",
+    "request": "^2.88.2",
+    "vue-chartjs": "^4.1.2",
+    "vue-prism-component": "^2.0.0"
   }
 }

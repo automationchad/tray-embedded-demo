@@ -1,0 +1,20 @@
+mutation updateSolutionInstance(
+	$solutionInstanceId: ID!
+	$instanceName: String!
+	$enabled: Boolean!
+) {
+	updateSolutionInstance(
+		input: {
+			solutionInstanceId: $solutionInstanceId
+			instanceName: $instanceName
+			enabled: $enabled
+		}
+	) {
+		solutionInstance {
+			id
+			name
+			enabled
+			created
+		}
+	}
+}

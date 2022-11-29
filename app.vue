@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-theme="'winter'">
     <NuxtPage />
   </div>
 </template>

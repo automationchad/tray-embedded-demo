@@ -1,0 +1,38 @@
+mutation createSolutionInstance ($solutionId: ID!, $instanceName: String!) {
+	createSolutionInstance(
+		input: { solutionId: $solutionId, instanceName: $instanceName }
+	) {
+		solutionInstance {
+			id
+			name
+			enabled
+			created
+			authValues {
+				authId
+				externalId
+			}
+			configValues {
+				value
+				externalId
+			}
+			solution {
+				id
+			}
+			workflows {
+				edges {
+					node {
+						id
+						sourceWorkflowId
+						sourceWorkflowName
+						triggerUrl
+					}
+				}
+			}
+			solutionVersionFlags {
+				hasNewerVersion
+				requiresUserInputToUpdateVersion
+				requiresSystemInputToUpdateVersion
+			}
+		}
+	}
+}

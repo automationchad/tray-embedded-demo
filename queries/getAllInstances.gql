@@ -1,0 +1,47 @@
+query getAllInstances ($ownerId: String!) {
+	viewer {
+		solutionInstances(criteria: { owner: $ownerId }) {
+			edges {
+				node {
+					id
+					name
+					enabled
+					owner
+					created
+					solutionVersionFlags {
+						hasNewerVersion
+						requiresUserInputToUpdateVersion
+						requiresSystemInputToUpdateVersion
+					}
+					solution {
+						id
+					}
+					workflows {
+						edges {
+							node {
+								triggerUrl
+								id
+								sourceWorkflowId
+							}
+						}
+					}
+					authValues {
+						externalId
+						authId
+					}
+					configValues {
+						externalId
+						value
+					}
+				}
+				cursor
+			}
+			pageInfo {
+				startCursor
+				endCursor
+				hasNextPage
+				hasPreviousPage
+			}
+		}
+	}
+}

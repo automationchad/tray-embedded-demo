@@ -1,0 +1,5 @@
+mutation generateAuthorizationCode ($userId: ID!) {
+	generateAuthorizationCode(input: { userId: $userId }) {
+		authorizationCode
+	}
+}

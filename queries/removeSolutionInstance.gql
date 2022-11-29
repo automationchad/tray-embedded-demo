@@ -1,0 +1,5 @@
+mutation removeSolutionInstance ($solutionInstanceId: ID!) {
+	removeSolutionInstance(input: { solutionInstanceId: $solutionInstanceId }) {
+		clientMutationId
+	}
+}

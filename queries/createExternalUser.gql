@@ -1,0 +1,15 @@
+mutation createExternalUser(
+	$externalUserId: String!
+	$name: String!
+	$isTestUser: Boolean
+) {
+	createExternalUser(
+		input: {
+			name: $name
+			externalUserId: $externalUserId
+			isTestUser: $isTestUser
+		}
+	) {
+		userId
+	}
+}

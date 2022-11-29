@@ -1,0 +1,19 @@
+query GetUserByExId($externalUserId: String!) {
+	users(criteria: { externalUserId: $externalUserId }) {
+		edges {
+			node {
+				name
+				id
+				externalUserId
+				isTestUser
+			}
+			cursor
+		}
+		pageInfo {
+			hasNextPage
+			endCursor
+			hasPreviousPage
+			startCursor
+		}
+	}
+}
